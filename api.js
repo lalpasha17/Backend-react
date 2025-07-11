@@ -22,9 +22,11 @@ async function connectToDB() {
     console.log("MongoDB connected");
 
     // Start server only after DB is connected
-    app.listen(3300, () => {
-      console.log("Server started: http://127.0.0.1:3300");
-    });
+    const PORT = process.env.PORT || 3300;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
+
   } catch (err) {
     console.error("MongoDB connection error:", err);
   }
