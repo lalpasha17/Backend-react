@@ -12,7 +12,7 @@ const client = new MongoClient(conString);
 let db;
 
 // Connect to MongoDB once
-async function connectToDB() {c
+async function connectToDB() {
   try {
     await client.connect();
     db = client.db("todo-react");
